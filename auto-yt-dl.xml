@@ -12,12 +12,12 @@
   <Overview>auto-yt-dl is used to automatically download new Videos of specific YouTube Channels. It features a Web Gui to add and remove Channels from your watch list. </Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/xXGuhuXx/unraid-templates/main/auto-yt-dl.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/xXGuhuXx/unraid-templates/main/auto-yt-dl.jpg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1631045337</DateInstalled>
+  <DateInstalled>1631106562</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>auto-yt-dl is used to automatically download new Videos of specific YouTube Channels. It features a Web Gui to add and remove Channels from your watch list. </Description>
@@ -33,13 +33,19 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir/>
+      <HostDir>/mnt/user/unRaidLars/downloads/k/</HostDir>
       <ContainerDir>/app/Downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/auto-yt-dl</HostDir>
+      <ContainerDir>/app/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
   <Config Name="Host Port 1" Target="5000" Default="" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="false" Mask="false">5000</Config>
-  <Config Name="Host Path 1" Target="/app/Downloads" Default="" Mode="rw" Description="This is the destination of the downloaded videos." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host Path 1" Target="/app/Downloads" Default="" Mode="rw" Description="This is the destination of the downloaded videos." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/unRaidLars/downloads/k/</Config>
+  <Config Name="AppData" Target="/app/data" Default="/mnt/user/appdata/auto-yt-dl" Mode="rw" Description="Used to store data (ex. monitored Channels)" Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/auto-yt-dl</Config>
 </Container>
