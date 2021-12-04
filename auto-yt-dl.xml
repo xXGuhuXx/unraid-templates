@@ -33,7 +33,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/unRaidLars/downloads/k/</HostDir>
+      <HostDir/>
       <ContainerDir>/app/Downloads</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
